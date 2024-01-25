@@ -10,8 +10,9 @@ export default async function SignInPage() {
   }
 
   return (
-    <div className="flex h-[calc(100vh-theme(spacing.16))] items-center justify-center py-10">
-      <LoginButton />
+    <div className="flex flex-col h-[calc(100vh-theme(spacing.16))] items-center justify-center py-10">
+      <LoginButton className='my-2' text="Login with Github" provider="github"/>
+      <LoginButton className='my-2' text="Login with Google" provider="google" showGithubIcon={false} />
     </div>
   )
 }
